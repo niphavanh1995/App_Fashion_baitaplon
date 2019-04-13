@@ -11,7 +11,7 @@ import com.squareup.picasso.Picasso;
 public class Main2Activity extends AppCompatActivity {
     private ImageView anhchinhInfor,anh1Infor,anh2Infor,anh3Infor;
     private TextView NDInfor,ND1Infor,ND2Infor,ND3Infor;
-    public static String DOMAIN_anh="https://android-review-food.000webhostapp.com/";
+    public static String DOMAIN_anh="http://android-review-food.000webhostapp.com/";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
