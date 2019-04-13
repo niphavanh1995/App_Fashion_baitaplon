@@ -23,7 +23,7 @@ public class Adapter_Fashion extends RecyclerView.Adapter<Adapter_Fashion.MyHold
     private Context context;
     private List<Fashion> listFa;
 
-    public static String DOMAIN_anh="https://android-review-food.000webhostapp.com/";
+//    public static String DOMAIN_anh="https://android-review-food.000webhostapp.com/";
 
 
     public Adapter_Fashion(Context context, List<Fashion> listFa) {
@@ -42,8 +42,10 @@ public class Adapter_Fashion extends RecyclerView.Adapter<Adapter_Fashion.MyHold
     @Override
     public void onBindViewHolder(@NonNull MyHolder myHolder, int i) {
         Fashion fashion = listFa.get(i);
+
         if (!TextUtils.isEmpty(fashion.getAnh_Interface())) {
-            Picasso.with(context).load(DOMAIN_anh+fashion.getAnh_Interface()).resize(350,350).into(myHolder.anhchinh);
+            String imgUrl = Api.getURLImage() + fashion.getAnh_Interface();
+            Api.getPicaso(context).load(imgUrl).resize(350,350).into(myHolder.anhchinh);
             Log.e("True ","Co anh "+ fashion.getAnh_Interface());
         } else {
             Log.e("Err anh", "Khong co anh");
