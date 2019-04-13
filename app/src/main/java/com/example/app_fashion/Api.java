@@ -23,7 +23,7 @@ import retrofit2.http.Query;
 
 public class Api {
     private  static Retrofit retrofit=null;
-    public static String DOMAIN="https://android-review-food.000webhostapp.com"  ;
+    public static String DOMAIN="http://android-review-food.000webhostapp.com"  ;
     public static String BaseURL=DOMAIN + "/Titee/Code/"  ;
 
     public static String getURLImage() {
