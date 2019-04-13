@@ -27,7 +27,7 @@ public class Api {
     public static String BaseURL=DOMAIN + "/Titee/Code/"  ;
 
     public static String getURLImage() {
-        return DOMAIN;
+        return DOMAIN+"/";
     }
     public static OkHttpClient.Builder getUnsafeOkHttpClient() {
         try {
